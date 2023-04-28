@@ -43,6 +43,11 @@ class GameScene: SKScene {
         let location = touch.location(in: self)
         
         orange?.position = location
+        
+        let path = UIBezierPath()
+        path.move(to: touchStart)
+        path.addLine(to: location)
+        shapeNode.path = path.cgPath
     }
     
     override func touchesEnded(_ touches: Set<UITouch>, with event: UIEvent?) {
@@ -55,6 +60,7 @@ class GameScene: SKScene {
         
         orange?.physicsBody?.isDynamic = true
         orange?.physicsBody?.applyImpulse(vector)
+        shapeNode.path = nil
     }
     
 }
