@@ -15,6 +15,7 @@
 		3AE05A2029FB26D200E2ED25 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AE05A1F29FB26D200E2ED25 /* Assets.xcassets */; };
 		3AE05A2329FB26D200E2ED25 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3AE05A2129FB26D200E2ED25 /* LaunchScreen.storyboard */; };
 		3AE05A2A29FB274500E2ED25 /* Smashing-Things.atlas in Resources */ = {isa = PBXBuildFile; fileRef = 3AE05A2929FB274500E2ED25 /* Smashing-Things.atlas */; };
+		3AE05A2C29FB4E5700E2ED25 /* Orange.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE05A2B29FB4E5600E2ED25 /* Orange.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -27,6 +28,7 @@
 		3AE05A1F29FB26D200E2ED25 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3AE05A2229FB26D200E2ED25 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3AE05A2929FB274500E2ED25 /* Smashing-Things.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = "Smashing-Things.atlas"; sourceTree = "<group>"; };
+		3AE05A2B29FB4E5600E2ED25 /* Orange.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Orange.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +65,7 @@
 				3AE05A1429FB26D000E2ED25 /* GameScene.sks */,
 				3AE05A1829FB26D000E2ED25 /* GameScene.swift */,
 				3AE05A1A29FB26D000E2ED25 /* GameViewController.swift */,
+				3AE05A2B29FB4E5600E2ED25 /* Orange.swift */,
 				3AE05A1C29FB26D000E2ED25 /* Main.storyboard */,
 				3AE05A2929FB274500E2ED25 /* Smashing-Things.atlas */,
 				3AE05A1F29FB26D200E2ED25 /* Assets.xcassets */,
@@ -147,6 +150,7 @@
 				3AE05A1929FB26D000E2ED25 /* GameScene.swift in Sources */,
 				3AE05A1B29FB26D000E2ED25 /* GameViewController.swift in Sources */,
 				3AE05A1329FB26D000E2ED25 /* AppDelegate.swift in Sources */,
+				3AE05A2C29FB4E5700E2ED25 /* Orange.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
