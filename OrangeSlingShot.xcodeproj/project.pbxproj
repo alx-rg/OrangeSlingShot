@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		3ADC43E929FCA471005D0D7E /* Level-2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC43E829FCA471005D0D7E /* Level-2.sks */; };
+		3ADC43EB29FCAAF4005D0D7E /* Level-3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC43EA29FCAAF4005D0D7E /* Level-3.sks */; };
+		3ADC43ED29FCAC6F005D0D7E /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC43EC29FCAC6F005D0D7E /* Explosion.sks */; };
+		3ADC43EF29FCAE54005D0D7E /* Smoke.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC43EE29FCAE54005D0D7E /* Smoke.sks */; };
 		3AE05A1329FB26D000E2ED25 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE05A1229FB26D000E2ED25 /* AppDelegate.swift */; };
 		3AE05A1529FB26D000E2ED25 /* Level-1.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3AE05A1429FB26D000E2ED25 /* Level-1.sks */; };
 		3AE05A1929FB26D000E2ED25 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AE05A1829FB26D000E2ED25 /* GameScene.swift */; };
@@ -21,6 +24,9 @@
 
 /* Begin PBXFileReference section */
 		3ADC43E829FCA471005D0D7E /* Level-2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-2.sks"; sourceTree = "<group>"; };
+		3ADC43EA29FCAAF4005D0D7E /* Level-3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-3.sks"; sourceTree = "<group>"; };
+		3ADC43EC29FCAC6F005D0D7E /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
+		3ADC43EE29FCAE54005D0D7E /* Smoke.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Smoke.sks; sourceTree = "<group>"; };
 		3AE05A0F29FB26D000E2ED25 /* OrangeSlingShot.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OrangeSlingShot.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AE05A1229FB26D000E2ED25 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3AE05A1429FB26D000E2ED25 /* Level-1.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-1.sks"; sourceTree = "<group>"; };
@@ -65,8 +71,11 @@
 			children = (
 				3AE05A1229FB26D000E2ED25 /* AppDelegate.swift */,
 				3AE05A1429FB26D000E2ED25 /* Level-1.sks */,
+				3ADC43EA29FCAAF4005D0D7E /* Level-3.sks */,
 				3ADC43E829FCA471005D0D7E /* Level-2.sks */,
 				3AE05A1829FB26D000E2ED25 /* GameScene.swift */,
+				3ADC43EE29FCAE54005D0D7E /* Smoke.sks */,
+				3ADC43EC29FCAC6F005D0D7E /* Explosion.sks */,
 				3AE05A1A29FB26D000E2ED25 /* GameViewController.swift */,
 				3AE05A2B29FB4E5600E2ED25 /* Orange.swift */,
 				3AE05A1C29FB26D000E2ED25 /* Main.storyboard */,
@@ -138,9 +147,12 @@
 				3AE05A2A29FB274500E2ED25 /* Smashing-Things.atlas in Resources */,
 				3AE05A1E29FB26D000E2ED25 /* Main.storyboard in Resources */,
 				3AE05A1529FB26D000E2ED25 /* Level-1.sks in Resources */,
+				3ADC43EB29FCAAF4005D0D7E /* Level-3.sks in Resources */,
 				3ADC43E929FCA471005D0D7E /* Level-2.sks in Resources */,
+				3ADC43ED29FCAC6F005D0D7E /* Explosion.sks in Resources */,
 				3AE05A2029FB26D200E2ED25 /* Assets.xcassets in Resources */,
 				3AE05A2329FB26D200E2ED25 /* LaunchScreen.storyboard in Resources */,
+				3ADC43EF29FCAE54005D0D7E /* Smoke.sks in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

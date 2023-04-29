@@ -12,7 +12,7 @@ class GameScene: SKScene {
     var touchStart: CGPoint = .zero
     var shapeNode = SKShapeNode()
     var boundary = SKNode()
-    var numOfLevels: UInt32 = 2
+    var numOfLevels: UInt32 = 3
     
     // Class method to load .sks files
     static func Load(level: Int) -> GameScene? {
@@ -107,8 +107,19 @@ extension GameScene: SKPhysicsContactDelegate {
         if contact.collisionImpulse > 15 {
             if nodeA?.name == "skull" {
                 removeSkull(node: nodeA!)
+                skullDestroyedParticles(point: nodeA!.position)
             } else if nodeB?.name == "skull" {
                 removeSkull(node: nodeB!)
+                skullDestroyedParticles(point: nodeB!.position)
+            }
+        }
+        if contact.collisionImpulse > 5 {
+            if nodeA?.name == "orange" {
+                removeOrange(node: nodeA!)
+                orangeDestroySmoke(point: nodeA!.position)
+            } else if nodeB?.name == "orange" {
+                removeOrange(node: nodeB!)
+                orangeDestroySmoke(point: nodeB!.position)
             }
         }
     }
@@ -116,4 +127,33 @@ extension GameScene: SKPhysicsContactDelegate {
     func removeSkull(node: SKNode){
         node.removeFromParent()
     }
+    func removeOrange(node: SKNode){
+        node.removeFromParent()
+    }
+
 }
+
+extension GameScene {
+  func skullDestroyedParticles(point: CGPoint) {
+      if let explosion = SKEmitterNode(fileNamed: "Explosion") {
+        addChild(explosion)
+        explosion.position = point
+        let wait = SKAction.wait(forDuration: 1)
+        let removeExplosion = SKAction.removeFromParent()
+        explosion.run(SKAction.sequence([wait, removeExplosion]))
+      }
+    }
+}
+
+extension GameScene {
+    func orangeDestroySmoke(point: CGPoint) {
+        if let smoke = SKEmitterNode(fileNamed: "Smoke") {
+            addChild(smoke)
+            smoke.position = point
+            let wait = SKAction.wait(forDuration: 6)
+            let removeSmoke = SKAction.removeFromParent()
+            smoke.run(SKAction.sequence([wait, removeSmoke]))
+        }
+    }
+}
+
