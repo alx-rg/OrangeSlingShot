@@ -13,6 +13,8 @@ class GameScene: SKScene {
     var shapeNode = SKShapeNode()
     var boundary = SKNode()
     var numOfLevels: UInt32 = 3
+    var points = SKLabelNode()
+    var score: Int = 0
     
     // Class method to load .sks files
     static func Load(level: Int) -> GameScene? {
@@ -29,9 +31,22 @@ class GameScene: SKScene {
         physicsWorld.contactDelegate = self
         
         // Setup the boundaries
-        boundary.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(origin: .zero, size: size))
-        boundary.position = .zero
-        addChild(boundary)
+          boundary.physicsBody = SKPhysicsBody(edgeLoopFrom: CGRect(origin: .zero, size: size))
+          let background = childNode(withName: "background") as? SKSpriteNode
+          boundary.position = CGPoint(x: (background?.size.width ?? 0) / 2, y: (background?.size.height ?? 0) / 2)
+          addChild(boundary)
+        
+        //Add the points to the scene
+        let points = SKLabelNode(text: "Points")
+        points.name = "points"
+        points.position.x = -400
+        points.position.y = 200
+        addChild(points)
+        
+        let pointsLabel = SKLabelNode(text: "Score: 0")
+        pointsLabel.name = "pointsLabel"
+        pointsLabel.position = CGPoint(x: -400, y: 150)
+        addChild(pointsLabel)
         
         // Add the Sun to the scene
         let sun = SKSpriteNode(imageNamed: "Sun")
@@ -108,9 +123,11 @@ extension GameScene: SKPhysicsContactDelegate {
             if nodeA?.name == "skull" {
                 removeSkull(node: nodeA!)
                 skullDestroyedParticles(point: nodeA!.position)
+                score += 1 // Add 1 to the score
             } else if nodeB?.name == "skull" {
                 removeSkull(node: nodeB!)
                 skullDestroyedParticles(point: nodeB!.position)
+                score += 1 // Add 1 to the score
             }
         }
         if contact.collisionImpulse > 5 {
@@ -130,7 +147,7 @@ extension GameScene: SKPhysicsContactDelegate {
     func removeOrange(node: SKNode){
         node.removeFromParent()
     }
-
+    
 }
 
 extension GameScene {
