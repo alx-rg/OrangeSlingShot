@@ -36,16 +36,13 @@ class GameScene: SKScene {
           boundary.position = CGPoint(x: (background?.size.width ?? 0) / 2, y: (background?.size.height ?? 0) / 2)
           addChild(boundary)
         
-        //Add the points to the scene
-        let points = SKLabelNode(text: "Points")
-        points.name = "points"
-        points.position.x = -400
-        points.position.y = 200
-        addChild(points)
         
         let pointsLabel = SKLabelNode(text: "Score: 0")
         pointsLabel.name = "pointsLabel"
-        pointsLabel.position = CGPoint(x: -400, y: 150)
+        pointsLabel.fontColor = SKColor.black
+        pointsLabel.fontSize = 50
+        pointsLabel.fontName = "Helvetica-Bold"
+        pointsLabel.position = CGPoint(x: -520, y: 220)
         addChild(pointsLabel)
         
         // Add the Sun to the scene
@@ -116,6 +113,12 @@ class GameScene: SKScene {
 
 extension GameScene: SKPhysicsContactDelegate {
     func didBegin(_ contact: SKPhysicsContact) {
+        
+        print("Score: \(score)")
+        if let scoreLabel = childNode(withName: "pointsLabel") as? SKLabelNode {
+            scoreLabel.text = "Score: \(score)"
+        }
+
         let nodeA = contact.bodyA.node
         let nodeB = contact.bodyB.node
         
@@ -147,7 +150,6 @@ extension GameScene: SKPhysicsContactDelegate {
     func removeOrange(node: SKNode){
         node.removeFromParent()
     }
-    
 }
 
 extension GameScene {
