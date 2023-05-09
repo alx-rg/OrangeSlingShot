@@ -21,6 +21,16 @@ class GameScene: SKScene {
       return GameScene(fileNamed: "Level-\(level)")
     }
     
+    func removeOrangeAfterDelay(node: SKNode) {
+        let wait = SKAction.wait(forDuration: 6)
+        let addSmoke = SKAction.run { [weak self] in
+            self?.skullDestroyedParticles(point: node.position)
+        }
+        let remove = SKAction.removeFromParent()
+        let sequence = SKAction.sequence([wait, addSmoke, remove])
+        node.run(sequence)
+    }
+    
     override func didMove(to view: SKView) {
         orangeTree = childNode(withName: "tree") as? SKSpriteNode
         shapeNode.lineWidth = 20
@@ -62,6 +72,7 @@ class GameScene: SKScene {
         if atPoint(location).name == "tree" {
             // Create the orange and add it to the scene at the touch location
             orange = Orange()
+            removeOrangeAfterDelay(node: orange!)
             orange?.physicsBody?.isDynamic =  false
             orange?.position = location
             addChild(orange!)
@@ -133,21 +144,9 @@ extension GameScene: SKPhysicsContactDelegate {
                 score += 1 // Add 1 to the score
             }
         }
-        if contact.collisionImpulse > 5 {
-            if nodeA?.name == "orange" {
-                removeOrange(node: nodeA!)
-                orangeDestroySmoke(point: nodeA!.position)
-            } else if nodeB?.name == "orange" {
-                removeOrange(node: nodeB!)
-                orangeDestroySmoke(point: nodeB!.position)
-            }
-        }
     }
     
     func removeSkull(node: SKNode){
-        node.removeFromParent()
-    }
-    func removeOrange(node: SKNode){
         node.removeFromParent()
     }
 }
@@ -166,13 +165,13 @@ extension GameScene {
 
 extension GameScene {
     func orangeDestroySmoke(point: CGPoint) {
-        if let smoke = SKEmitterNode(fileNamed: "Smoke") {
-            addChild(smoke)
-            smoke.position = point
-            let wait = SKAction.wait(forDuration: 6)
-            let removeSmoke = SKAction.removeFromParent()
-            smoke.run(SKAction.sequence([wait, removeSmoke]))
+        if let explosion = SKEmitterNode(fileNamed: "Smoke") {
+          addChild(explosion)
+          explosion.position = point
+          let wait = SKAction.wait(forDuration: 1)
+          let removeExplosion = SKAction.removeFromParent()
+          explosion.run(SKAction.sequence([wait, removeExplosion]))
         }
-    }
+      }
 }
 
