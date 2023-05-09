@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3AB0227C2A09D83D005E08E7 /* Level-4.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3AB0227B2A09D83D005E08E7 /* Level-4.sks */; };
 		3ADC43E929FCA471005D0D7E /* Level-2.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC43E829FCA471005D0D7E /* Level-2.sks */; };
 		3ADC43EB29FCAAF4005D0D7E /* Level-3.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC43EA29FCAAF4005D0D7E /* Level-3.sks */; };
 		3ADC43ED29FCAC6F005D0D7E /* Explosion.sks in Resources */ = {isa = PBXBuildFile; fileRef = 3ADC43EC29FCAC6F005D0D7E /* Explosion.sks */; };
@@ -23,6 +24,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		3AB0227B2A09D83D005E08E7 /* Level-4.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-4.sks"; sourceTree = "<group>"; };
 		3ADC43E829FCA471005D0D7E /* Level-2.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-2.sks"; sourceTree = "<group>"; };
 		3ADC43EA29FCAAF4005D0D7E /* Level-3.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = "Level-3.sks"; sourceTree = "<group>"; };
 		3ADC43EC29FCAC6F005D0D7E /* Explosion.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Explosion.sks; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				3AE05A1229FB26D000E2ED25 /* AppDelegate.swift */,
 				3AE05A1429FB26D000E2ED25 /* Level-1.sks */,
 				3ADC43EA29FCAAF4005D0D7E /* Level-3.sks */,
+				3AB0227B2A09D83D005E08E7 /* Level-4.sks */,
 				3ADC43E829FCA471005D0D7E /* Level-2.sks */,
 				3AE05A1829FB26D000E2ED25 /* GameScene.swift */,
 				3ADC43EE29FCAE54005D0D7E /* Smoke.sks */,
@@ -147,6 +150,7 @@
 				3AE05A2A29FB274500E2ED25 /* Smashing-Things.atlas in Resources */,
 				3AE05A1E29FB26D000E2ED25 /* Main.storyboard in Resources */,
 				3AE05A1529FB26D000E2ED25 /* Level-1.sks in Resources */,
+				3AB0227C2A09D83D005E08E7 /* Level-4.sks in Resources */,
 				3ADC43EB29FCAAF4005D0D7E /* Level-3.sks in Resources */,
 				3ADC43E929FCA471005D0D7E /* Level-2.sks in Resources */,
 				3ADC43ED29FCAC6F005D0D7E /* Explosion.sks in Resources */,

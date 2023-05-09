@@ -12,7 +12,7 @@ class GameScene: SKScene {
     var touchStart: CGPoint = .zero
     var shapeNode = SKShapeNode()
     var boundary = SKNode()
-    var numOfLevels: UInt32 = 3
+    var numOfLevels: UInt32 = 4
     var points = SKLabelNode()
     var score: Int = 0
     
